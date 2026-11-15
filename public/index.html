@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laveen & Anoushka — Wedding Guide</title>
+<meta name="theme-color" content="#8e0303">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="L &amp; A Wedding">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+SC:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#8e0303; --red-deep:#6f0202; --red-soft:#a51515;
+    --cream:#f4ecdd; --cream-dim:rgba(244,236,221,.72); --cream-faint:rgba(244,236,221,.28);
+    --ink:#3a0d0d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:var(--red)}
+  body{font-family:'Jost',system-ui,sans-serif;font-weight:300;color:var(--cream);background:var(--red);
+    min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+  .wrap{max-width:480px;margin:0 auto;padding:14px 14px 0}
+  .frame{border:3px double var(--cream);padding:26px 18px;margin-bottom:16px;position:relative}
+  .script{font-family:'Pinyon Script',cursive;font-weight:400;line-height:1.1}
+  .caps{font-family:'Cormorant SC',serif;letter-spacing:.14em;text-transform:uppercase}
+  h1.caps{font-size:25px;font-weight:500;text-align:center;letter-spacing:.1em}
+  .names{font-size:50px;text-align:center;margin:10px 0 4px}
+  .center{text-align:center}
+  .muted{color:var(--cream-dim)}
+  .small{font-size:13px}
+  .view{display:none}
+  .view.on{display:block}
+  .seal{width:74px;height:74px;margin:18px auto 14px;display:block}
+  .dates{font-size:24px;letter-spacing:.2em;text-align:center;margin-top:6px}
+  .count{display:flex;justify-content:center;gap:18px;margin:18px 0 6px}
+  .count div{text-align:center;min-width:54px}
+  .count b{display:block;font-family:'Cormorant SC',serif;font-weight:500;font-size:32px;line-height:1}
+  .count span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-dim)}
+  .btn{display:block;width:100%;border:1.5px solid var(--cream);background:transparent;color:var(--cream);
+    font-family:'Cormorant SC',serif;font-size:17px;letter-spacing:.16em;padding:15px 12px;text-align:center;
+    text-decoration:none;cursor:pointer;margin-top:12px}
+  .btn.solid{background:var(--cream);color:var(--red-deep);font-weight:600}
+  .btn.sm{font-size:14px;padding:11px 10px}
+  .btn:active{opacity:.75}
+  .btn:disabled{opacity:.6}
+  .tag{display:inline-block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--cream-faint);
+    padding:3px 9px;margin-bottom:10px}
+  .tag.live{background:var(--cream);color:var(--red-deep);border-color:var(--cream);font-weight:500}
+  .evname{font-family:'Cormorant SC',serif;font-size:28px;letter-spacing:.12em;line-height:1.15}
+  .evscript{font-size:25px;margin-top:2px}
+  .row{display:flex;gap:10px;align-items:baseline;margin-top:8px;font-size:15px}
+  .row i{font-style:normal;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-dim);min-width:52px}
+  .sw{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:10px}
+  .sw span{display:flex;align-items:center;gap:6px;font-size:12.5px}
+  .sw em{width:14px;height:14px;border-radius:50%;border:1px solid var(--cream-faint);display:inline-block}
+  .divider{height:1px;background:var(--cream-faint);margin:20px 0}
+  .day{font-family:'Cormorant SC',serif;letter-spacing:.2em;font-size:15px;text-align:center;margin:6px 0 14px;color:var(--cream-dim)}
+  .ev{padding:16px 0;border-top:1px solid var(--cream-faint)}
+  .ev:first-of-type{border-top:0;padding-top:0}
+  .ev.done{opacity:.45}
+  .notice{background:var(--cream);color:var(--ink);padding:14px 16px;margin-bottom:16px;font-weight:400;font-size:14.5px}
+  .notice b{font-family:'Cormorant SC',serif;letter-spacing:.14em;font-size:12px;display:block;margin-bottom:3px;color:var(--red)}
+  .notice small{display:block;margin-top:4px;opacity:.6;font-size:11.5px}
+  .tbc{font-size:12px;text-align:center;color:var(--cream-dim);border:1px dashed var(--cream-faint);padding:8px 10px;margin-bottom:16px}
+  dl{font-size:15px}
+  dt{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-dim);margin-top:14px}
+  dd{margin-top:2px}
+  dd a{color:var(--cream)}
+  nav{position:fixed;left:0;right:0;bottom:0;background:var(--red-deep);border-top:1px solid var(--cream-faint);
+    display:flex;justify-content:center;z-index:5}
+  nav a{flex:1;max-width:120px;text-align:center;color:var(--cream-dim);text-decoration:none;padding:10px 4px 12px;
+    font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+  nav a svg{display:block;margin:0 auto 4px;width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.4}
+  nav a.on{color:var(--cream)}
+  label{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-dim);margin:12px 0 4px}
+  input,textarea{width:100%;background:rgba(0,0,0,.18);border:1px solid var(--cream-faint);color:var(--cream);
+    font-family:'Jost',sans-serif;font-size:16px;padding:10px;border-radius:0;color-scheme:dark}
+  textarea{min-height:70px;resize:vertical}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .chips button{background:transparent;border:1px solid var(--cream-faint);color:var(--cream);font-family:'Jost',sans-serif;
+    font-size:12.5px;padding:7px 11px;cursor:pointer}
+  .chips button.on{background:var(--cream);color:var(--red-deep);border-color:var(--cream)}
+  .sheet{position:fixed;inset:0;background:rgba(40,0,0,.72);display:none;align-items:flex-end;z-index:20}
+  .sheet.on{display:flex}
+  .sheet .card{background:var(--cream);color:var(--ink);width:100%;max-width:480px;margin:0 auto;padding:24px 20px 28px;font-weight:400}
+  .sheet h2{font-family:'Cormorant SC',serif;letter-spacing:.12em;font-size:20px;color:var(--red);margin-bottom:10px}
+  .sheet ol{padding-left:20px;font-size:15px;margin:6px 0 14px}
+  .sheet li{margin:5px 0}
+  .sheet h3{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-top:10px;color:var(--red)}
+  .sheet .btn{border-color:var(--red);color:var(--red)}
+  .toast{position:fixed;top:12px;left:12px;right:12px;max-width:456px;margin:0 auto;background:#fbf7ef;color:var(--ink);
+    border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.4);z-index:30;font-weight:400;
+    transform:translateY(-140%);transition:transform .45s ease}
+  .toast.on{transform:none}
+  .toast b{display:block;font-size:13px}
+  .toast span{font-size:14px}
+  .toast small{display:block;font-size:11px;opacity:.55;margin-bottom:2px;letter-spacing:.06em;text-transform:uppercase}
+  .preview-bar{background:var(--cream);color:var(--red-deep);font-size:12px;text-align:center;padding:6px 10px;font-weight:500;display:none}
+  .preview-bar.on{display:block}
+  @media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="preview-bar" id="previewBar"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="wrap">
+
+  <!-- HOME -->
+  <section class="view" id="v-home">
+    <div class="frame">
+      <h1 class="caps">We are getting married!</h1>
+      <div class="script names" id="names"></div>
+      <svg class="seal" viewBox="0 0 80 80" aria-hidden="true">
+        <path d="M40 4c7 0 9 5 15 6s11 1 13 7 0 9 3 14 6 8 4 14-7 6-9 11-1 10-6 13-9 0-14 2-8 5-13 3-5-7-10-9-10-2-12-7 1-9-1-14-6-8-4-14 7-6 10-11 1-10 7-13 9 1 14-1 2-1 3-1z" fill="#b01212" stroke="#5c0000" stroke-width="1.5"/>
+        <circle cx="40" cy="40" r="22" fill="none" stroke="#5c0000" stroke-width="1.2"/>
+        <text x="40" y="47" text-anchor="middle" font-family="Pinyon Script, cursive" font-size="22" fill="#f4ecdd">L&amp;A</text>
+      </svg>
+      <div class="script center" style="font-size:36px">Save the Date</div>
+      <div class="caps dates" id="dates"></div>
+      <div class="center muted small" id="venueLine" style="margin-top:6px"></div>
+      <div class="count" id="count"></div>
+      <div class="center script" id="countLabel" style="font-size:24px"></div>
+    </div>
+
+    <div id="homeNotices"></div>
+
+    <div class="frame">
+      <div id="nowNext"></div>
+      <a class="btn sm" href="#schedule">Full schedule</a>
+    </div>
+
+    <div class="frame center">
+      <div class="script" style="font-size:32px">Stay in the loop</div>
+      <p class="small muted" style="margin-top:8px">Add this guide to your home screen to get a reminder before every function, and any last-minute changes from the family.</p>
+      <button class="btn solid" id="a2hs">Add to home screen</button>
+      <button class="btn sm" id="remind">Turn on reminders</button>
+      <p class="small muted" id="pushStatus" style="margin-top:10px"></p>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="view" id="v-schedule">
+    <div class="frame">
+      <div class="script center" style="font-size:40px">The Celebrations</div>
+      <div class="divider"></div>
+      <div class="tbc" id="tbc">Timings are placeholders until the formal invite is out.</div>
+      <div id="schedList"></div>
+      <div class="divider"></div>
+      <p class="caps center small">Please pack a lightweight, comfortable backup outfit</p>
+    </div>
+  </section>
+
+  <!-- VENUE -->
+  <section class="view" id="v-venue">
+    <div class="frame">
+      <div class="script center" style="font-size:40px">Getting There</div>
+      <div class="caps center" style="font-size:20px;margin-top:10px" id="venueName"></div>
+      <div class="center muted small" id="venueLandmark"></div>
+      <a class="btn solid" id="dirBtn" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn sm" id="pinBtn" target="_blank" rel="noopener">Open Google pin</a>
+      <dl id="venueFacts"></dl>
+    </div>
+    <div class="frame">
+      <div class="script center" style="font-size:34px">Need help?</div>
+      <dl id="contacts"></dl>
+    </div>
+  </section>
+
+  <!-- HOST -->
+  <section class="view" id="v-host">
+    <div class="frame">
+      <div class="script center" style="font-size:40px">Host Desk</div>
+      <div id="hostGate">
+        <p class="small muted center" id="gateNote" style="margin-top:6px"></p>
+        <label for="gatePass" id="gateLabel">Host passcode</label>
+        <input type="password" id="gatePass" autocomplete="current-password">
+        <button class="btn sm solid" id="gateBtn">Open host desk</button>
+      </div>
+      <div id="hostDesk" style="display:none">
+      <p class="small muted center" style="margin-top:6px">Changes here reach every guest.</p>
+      <div class="divider"></div>
+
+      <div class="caps" style="font-size:16px">Send an announcement</div>
+      <label for="annText">Message to all guests</label>
+      <textarea id="annText" placeholder="Baraat is running 30 minutes late. Assemble at the main gate by 5:00 pm."></textarea>
+      <button class="btn sm solid" id="annSend">Send to guests</button>
+      <button class="btn sm" id="annClear">Clear announcements</button>
+
+      <div class="divider"></div>
+      <div class="caps" style="font-size:16px">Preview a moment</div>
+      <p class="small muted">See what guests see at different points in the wedding. Only your screen changes.</p>
+      <div class="chips" id="previewChips"></div>
+
+      <div class="divider"></div>
+      <div class="caps" style="font-size:16px">Edit the schedule</div>
+      <div id="editList"></div>
+      <label for="mapsUrl">Google Maps link for the venue pin</label><input type="url" id="mapsUrl" placeholder="https://maps.app.goo.gl/...">
+      <label style="display:flex;align-items:center;gap:10px;margin-top:16px"><input type="checkbox" id="confirmed" style="width:20px;height:20px"> Timings are final (hides the placeholder note)</label>
+      <button class="btn sm solid" id="saveSched">Save schedule</button>
+      <div class="divider"></div>
+      <button class="btn sm" id="hostLock">Lock host desk on this phone</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<nav>
+  <a href="#home" data-v="home"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>Home</a>
+  <a href="#schedule" data-v="schedule"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>Schedule</a>
+  <a href="#venue" data-v="venue"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>Venue</a>
+  <a href="#host" data-v="host"><svg viewBox="0 0 24 24"><path d="M4 18v-6a8 8 0 0 1 16 0v6M2 18h20M10 21h4"/></svg>Host</a>
+</nav>
+
+<div class="sheet" id="sheet">
+  <div class="card">
+    <h2>Add to home screen</h2>
+    <h3>iPhone (Safari)</h3>
+    <ol><li>Tap the <b>Share</b> button at the bottom of Safari.</li><li>Choose <b>Add to Home Screen</b>, then <b>Add</b>.</li><li>Open the guide from your home screen, tap <b>Turn on reminders</b>, then <b>Allow</b>.</li></ol>
+    <h3>Android (Chrome)</h3>
+    <ol><li>Tap <b>Install</b> when Chrome asks, or open the <b>⋮</b> menu and choose <b>Add to Home screen</b>.</li><li>Tap <b>Turn on reminders</b>, then <b>Allow</b>.</li></ol>
+    <button class="btn sm" id="sheetClose">Close</button>
+  </div>
+</div>
+
+<script>
+/* ---------- State (wedding details come from the server) ---------- */
+let WEDDING = null, announcements = [], vapidKey = "", hostClaimed = false, previewAt = null, skew = 0;
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} },
+  del(k){ try{ localStorage.removeItem(k); }catch(e){} }
+};
+let hostPass = store.get("wed-host", "");
+async function call(path, body, asHost){
+  const headers = {"content-type":"application/json"};
+  if(asHost) headers["x-host-passcode"] = hostPass;
+  const res = await fetch(path, {method: body ? "POST" : "GET", headers, body: body ? JSON.stringify(body) : undefined, cache:"no-store"});
+  const data = await res.json().catch(() => ({}));
+  if(!res.ok){ const err = new Error(data.error || "Something went wrong. Please try again."); err.status = res.status; throw err; }
+  return data;
+}
+async function load(){
+  try{
+    const s = await call("/api/state");
+    WEDDING = s.wedding; announcements = s.announcements; vapidKey = s.vapidPublicKey; hostClaimed = s.hostClaimed;
+    skew = s.now - Date.now(); store.set("wed-cache", s);
+  }catch(e){
+    if(!WEDDING){ const c = store.get("wed-cache", null); if(c){ WEDDING = c.wedding; announcements = c.announcements; hostClaimed = c.hostClaimed; } }
+  }
+}
+
+/* ---------- Time helpers (always India time) ---------- */
+const t = s => new Date(s + ":00+05:30").getTime();
+const now = () => previewAt ?? (Date.now() + skew);
+const fmt = (ms, o) => new Intl.DateTimeFormat("en-IN", Object.assign({timeZone:"Asia/Kolkata"}, o)).format(ms);
+const fTime = ms => fmt(ms, {hour:"numeric", minute:"2-digit", hour12:true});
+const fDay  = ms => fmt(ms, {weekday:"long", day:"numeric", month:"long"});
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $ = id => document.getElementById(id);
+function inWords(ms){
+  const m = Math.round(ms/60000);
+  if(m < 60) return m + " min";
+  const h = Math.floor(m/60), r = m % 60;
+  if(h < 24) return h + " hr" + (r ? " " + r + " min" : "");
+  const d = Math.floor(h/24);
+  return d + (d === 1 ? " day" : " days");
+}
+
+/* ---------- Rendering ---------- */
+function swatches(e){
+  return '<div class="sw">' + e.colors.map(c => '<span><em style="background:'+esc(c[1])+'"></em>'+esc(c[0])+'</span>').join("") + '</div>';
+}
+function eventCard(e, tag, live){
+  return '<span class="tag'+(live?' live':'')+'">'+tag+'</span>' +
+    '<div class="evname">'+esc(e.name)+'</div>' +
+    '<div class="row"><i>When</i><span>'+fDay(t(e.start))+', '+fTime(t(e.start))+'</span></div>' +
+    '<div class="row"><i>Where</i><span>'+esc(e.spot)+'</span></div>' +
+    '<div class="row"><i>Wear</i><span class="script" style="font-size:22px">'+esc(e.dress)+'</span></div>' + swatches(e);
+}
+function renderNowNext(){
+  const n = now(), ev = WEDDING.events;
+  const cur = ev.find(e => t(e.start) <= n && n < t(e.end));
+  const nxt = ev.find(e => t(e.start) > n);
+  let h = "";
+  if(cur) h += eventCard(cur, "Happening now", true);
+  if(cur && nxt) h += '<div class="divider"></div>';
+  if(nxt) h += eventCard(nxt, (cur || nxt !== ev[0] ? "Up next" : "First up") + " · in " + inWords(t(nxt.start) - n), false);
+  if(!cur && !nxt) h = '<div class="script center" style="font-size:34px">Thank you for celebrating with us</div><p class="center muted small" style="margin-top:8px">Safe travels home.</p>';
+  $("nowNext").innerHTML = h;
+}
+function renderCount(){
+  const first = t(WEDDING.events[0].start), d = first - now();
+  if(d <= 0){ $("count").innerHTML = ""; $("countLabel").textContent = "The celebrations have begun"; return; }
+  const days = Math.floor(d/864e5), hrs = Math.floor(d%864e5/36e5), mins = Math.floor(d%36e5/6e4);
+  $("count").innerHTML = [[days,"Days"],[hrs,"Hours"],[mins,"Minutes"]].map(x => "<div><b>"+x[0]+"</b><span>"+x[1]+"</span></div>").join("");
+  $("countLabel").textContent = "Until forever begins…";
+}
+function renderNotices(){
+  $("homeNotices").innerHTML = announcements.map(a =>
+    '<div class="notice"><b>From the family</b>'+esc(a.body)+'<small>'+fDay(a.at)+', '+fTime(a.at)+'</small></div>').join("");
+}
+function renderSchedule(){
+  const n = now(); let h = "", day = "";
+  WEDDING.events.forEach(e => {
+    const d = fDay(t(e.start));
+    const live = t(e.start) <= n && n < t(e.end), done = n >= t(e.end);
+    const cls = 'ev' + (done ? ' done' : '');
+    if(d !== day){ h += (day ? '<div class="divider"></div>' : '') + '<div class="day">'+d+'</div><div class="'+cls+'" style="border-top:0;padding-top:0">'; day = d; }
+    else h += '<div class="'+cls+'">';
+    h += (live ? '<span class="tag live">Happening now</span>' : '') +
+      '<div class="evname">'+esc(e.name)+'</div>' +
+      '<div class="row"><i>Time</i><span>'+fTime(t(e.start))+' – '+fTime(t(e.end))+'</span></div>' +
+      '<div class="row"><i>Where</i><span>'+esc(e.spot)+'</span></div>' +
+      '<div class="row"><i>Wear</i><span class="script" style="font-size:22px">'+esc(e.dress)+'</span></div>' + swatches(e) + '</div>';
+  });
+  $("schedList").innerHTML = h;
+  $("tbc").style.display = WEDDING.timesConfirmed ? "none" : "";
+}
+function renderVenue(){
+  const v = WEDDING.venue, q = encodeURIComponent(v.mapsQuery);
+  $("names").innerHTML = esc(WEDDING.couple[0]) + " &amp; " + esc(WEDDING.couple[1]);
+  $("dates").textContent = WEDDING.dateLabel;
+  $("venueLine").textContent = v.name + ", " + v.city;
+  $("venueName").textContent = v.name + ", " + v.city;
+  $("venueLandmark").textContent = v.landmark;
+  $("dirBtn").href = "https://www.google.com/maps/dir/?api=1&destination=" + q;
+  $("pinBtn").href = v.mapsUrl || ("https://www.google.com/maps/search/?api=1&query=" + q);
+  $("venueFacts").innerHTML = v.facts.map(f => "<dt>"+esc(f[0])+"</dt><dd>"+esc(f[1])+"</dd>").join("");
+  $("contacts").innerHTML = WEDDING.contacts.map(c =>
+    "<dt>"+esc(c[0])+'</dt><dd><a href="tel:'+c[1].replace(/\s/g,"")+'">'+esc(c[1])+"</a></dd>").join("");
+}
+function renderEdit(){
+  $("editList").innerHTML = WEDDING.events.map(e =>
+    '<div style="margin-top:14px"><div class="evname" style="font-size:19px">'+esc(e.name)+'</div>' +
+    '<label for="s-'+e.id+'">Starts (India time)</label><input type="datetime-local" id="s-'+e.id+'" value="'+e.start+'">' +
+    '<label for="e-'+e.id+'">Ends</label><input type="datetime-local" id="e-'+e.id+'" value="'+e.end+'">' +
+    '<label for="p-'+e.id+'">Where in the resort</label><input type="text" id="p-'+e.id+'" value="'+esc(e.spot)+'"></div>').join("");
+  $("mapsUrl").value = WEDDING.venue.mapsUrl || "";
+  $("confirmed").checked = !!WEDDING.timesConfirmed;
+}
+let chips = [];
+function renderChips(){
+  chips = [["Right now", null]];
+  WEDDING.events.forEach(e => {
+    chips.push(["20 min before " + e.name, t(e.start) - 20*6e4]);
+    chips.push(["During " + e.name, t(e.start) + 45*6e4]);
+  });
+  chips.push(["After it all", t(WEDDING.events[WEDDING.events.length-1].end) + 36e5]);
+  $("previewChips").innerHTML = chips.map((c,i) => '<button data-i="'+i+'" class="'+(previewAt===c[1]?'on':'')+'">'+esc(c[0])+'</button>').join("");
+}
+function renderHostGate(){
+  const open = !!hostPass;
+  $("hostGate").style.display = open ? "none" : "";
+  $("hostDesk").style.display = open ? "" : "none";
+  $("gateLabel").textContent = hostClaimed ? "Host passcode" : "Choose a host passcode (at least 6 characters)";
+  $("gateBtn").textContent = hostClaimed ? "Open host desk" : "Set passcode";
+  $("gateNote").textContent = hostClaimed ? "Only the family's host can change the schedule or message guests." :
+    "No host yet. Whoever sets the passcode first becomes the host, so do this now and keep it safe.";
+}
+function renderAll(){
+  if(!WEDDING){ $("nowNext").innerHTML = '<p class="center">Could not load the wedding details. Check your connection and reopen the guide.</p>'; return; }
+  renderVenue(); renderCount(); renderNotices(); renderNowNext(); renderSchedule(); renderChips(); renderHostGate();
+  const bar = $("previewBar");
+  bar.classList.toggle("on", previewAt !== null);
+  if(previewAt !== null) bar.textContent = "Previewing (only you see this): " + fDay(previewAt) + ", " + fTime(previewAt);
+}
+
+/* ---------- In-page banner ---------- */
+let toastTimer;
+function toast(title, body){
+  const el = $("toast");
+  el.innerHTML = "<small>Wedding guide</small><b>"+esc(title)+"</b><span>"+esc(body)+"</span>";
+  el.classList.add("on");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove("on"), 5200);
+}
+
+/* ---------- Navigation ---------- */
+const VIEWS = ["home","schedule","venue","host"];
+function route(){
+  const v = VIEWS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "home";
+  VIEWS.forEach(x => $("v-"+x).classList.toggle("on", x === v));
+  document.querySelectorAll("nav a").forEach(a => a.classList.toggle("on", a.dataset.v === v));
+  window.scrollTo(0, 0);
+}
+window.addEventListener("hashchange", route);
+
+/* ---------- Install + reminders ---------- */
+const standalone = (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true;
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+let installEvent = null;
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvent = e; });
+if(standalone) $("a2hs").style.display = "none";
+$("a2hs").onclick = () => { if(installEvent){ installEvent.prompt(); installEvent = null; } else $("sheet").classList.add("on"); };
+$("sheetClose").onclick = () => $("sheet").classList.remove("on");
+$("sheet").onclick = e => { if(e.target === $("sheet")) $("sheet").classList.remove("on"); };
+
+const pushOK = "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
+if("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});
+function keyBytes(b64){
+  const s = atob(b64.replace(/-/g, "+").replace(/_/g, "/") + "=".repeat((4 - b64.length % 4) % 4));
+  return Uint8Array.from(s, c => c.charCodeAt(0));
+}
+function pushStatus(msg, on){ $("pushStatus").textContent = msg; if(on){ $("remind").textContent = "Reminders are on"; $("remind").disabled = true; } }
+async function enablePush(ask){
+  if(!pushOK){
+    if(ask) pushStatus(isIOS && !standalone ? "On iPhone, first add this guide to your home screen, open it from there, then tap this button again."
+      : "This browser can't show reminders. Open the guide in Chrome or Safari.");
+    return;
+  }
+  try{
+    if(Notification.permission !== "granted"){
+      if(!ask) return;
+      if((await Notification.requestPermission()) !== "granted"){ pushStatus("Reminders are blocked. Allow notifications for this guide in your phone settings, then try again."); return; }
+    }
+    const reg = await navigator.serviceWorker.ready;
+    let sub = await reg.pushManager.getSubscription();
+    if(!sub){ if(!ask) return; sub = await reg.pushManager.subscribe({userVisibleOnly:true, applicationServerKey:keyBytes(vapidKey)}); }
+    await call("/api/subscribe", {endpoint: sub.endpoint});
+    pushStatus("You'll get a reminder 30 minutes before each function, plus any updates from the family.", true);
+  }catch(e){ if(ask) pushStatus("Could not turn on reminders. Please try again."); }
+}
+$("remind").onclick = () => enablePush(true);
+
+/* ---------- Host desk ---------- */
+function hostError(e){
+  if(e.status === 401){ hostPass = ""; store.del("wed-host"); renderHostGate(); toast("Wrong passcode", "Enter the host passcode again."); }
+  else toast("Not saved", e.message);
+}
+$("gateBtn").onclick = async () => {
+  const p = $("gatePass").value;
+  try{
+    if(!hostClaimed){ await call("/api/host/claim", {passcode:p}); hostClaimed = true; }
+    hostPass = p; await call("/api/host/check", {}, true);
+    store.set("wed-host", p); $("gatePass").value = ""; renderHostGate();
+  }catch(e){ hostPass = ""; toast("Could not open", e.message); }
+};
+$("hostLock").onclick = () => { hostPass = ""; store.del("wed-host"); renderHostGate(); };
+$("previewChips").onclick = ev => {
+  const b = ev.target.closest("button"); if(!b) return;
+  previewAt = chips[+b.dataset.i][1];
+  renderAll(); location.hash = "#home";
+};
+$("annSend").onclick = async () => {
+  const text = $("annText").value.trim(); if(!text) return;
+  try{
+    const r = await call("/api/host/announce", {text}, true);
+    $("annText").value = ""; await load(); renderAll(); location.hash = "#home";
+    toast("Announcement sent", "Shown in the guide for everyone, and pushed to " + r.push.sent + " phone" + (r.push.sent === 1 ? "" : "s") + " with reminders on.");
+  }catch(e){ hostError(e); }
+};
+$("annClear").onclick = async () => {
+  try{ await call("/api/host/clear", {}, true); await load(); renderAll(); toast("Announcements cleared", "Guests no longer see them."); }catch(e){ hostError(e); }
+};
+$("saveSched").onclick = async () => {
+  const events = {};
+  for(const e of WEDDING.events) events[e.id] = {start:$("s-"+e.id).value, end:$("e-"+e.id).value, spot:$("p-"+e.id).value};
+  try{
+    const r = await call("/api/host/schedule", {events, mapsUrl:$("mapsUrl").value, timesConfirmed:$("confirmed").checked}, true);
+    WEDDING = r.wedding; renderAll(); renderEdit();
+    toast("Schedule saved", "Every guest sees the new timings within a minute.");
+  }catch(e){ hostError(e); }
+};
+
+/* ---------- Start ---------- */
+(async () => {
+  route();
+  await load(); renderAll();
+  if(WEDDING){ renderEdit(); enablePush(false); }
+  setInterval(async () => { await load(); renderAll(); }, 60000);
+  document.addEventListener("visibilitychange", async () => { if(!document.hidden){ await load(); renderAll(); } });
+})();
+</script>
+</body>
+</html>

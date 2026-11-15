@@ -1,0 +1,11 @@
+{
+  "name": "wedding-app",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-01-01",
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "wedding-app", "database_id": "54af3fdc-7f15-4f24-a7c1-8ab83bcf5145" }
+  ],
+  "triggers": { "crons": ["* * * * *"] },
+  "observability": { "enabled": true }
+}
